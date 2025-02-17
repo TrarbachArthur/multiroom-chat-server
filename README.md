@@ -53,7 +53,7 @@ Digite o nome de usuário conforme solicitado e, após confirmação do servidor
 
 ## Testes de carga
 
-Ao tentar realizar um teste de carga, o servidor apresentou um consumo desconsiderável de poder de processamento, além de apenas 12 MB (0,1% de 12 GB) de consumo de memória, para uma carga de 10 usuários conectados. O aumento do número de usuários não causou um crescimento linear no consumo de memória, portanto, é **seguro** dizer que: um servidor que atenda um máximo de 100 usuários terá um consumo de memória de aproximadamente 100 MB.
+Ao tentar realizar um teste de carga, o servidor apresentou um consumo desconsiderável de poder de processamento, além de 60 MB (0,1% de 12 GB * 5 usuários) de consumo de memória, para uma carga de 5 usuários conectados. . O aumento do número de usuários causou um crescimento linear no consumo de memória, devido à criação de threads “server.py” (mesmo que 0,1% aparente ser o mínimo que o método utilizado seja capaz de exibir), portanto, é **seguro** dizer que, em um cenário pessimista, um servidor que atenda um máximo de 50 usuários terá um consumo de memória de aproximadamente 600 MB.
 
 ## Funcionalidades
 
