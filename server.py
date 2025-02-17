@@ -202,10 +202,15 @@ def handle_client(connectionSocket, addr):
             connectionSocket.sendall("Please tell us your username: ".encode())
             username = connectionSocket.recv(1024).decode()
             
-            if username.split()[0].lower() == ':end':
+            if ":end" in username:
+                connectionSocket.sendall("Goodbye!".encode())
                 connectionSocket.close()
                 return
             
+            if username[0] == ':' or username == '':
+                connectionSocket.sendall("Invalid username\n".encode())
+                continue
+
             for client in clients.values():
                 if client['username'] == username:
                     connectionSocket.sendall("Username already in use\n".encode())
