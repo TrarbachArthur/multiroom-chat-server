@@ -58,12 +58,21 @@ Ao tentar realizar um teste de carga, o servidor apresentou um consumo desconsid
 ## Funcionalidades
 
 ✅ - Servidor multithread para atendimente de multíplos clientes simultaneamente.
+
 ✅ - Sistema multisala, permitindo que usuários troquem mensagens apenas com usuários presentes na mesma sala.
+
 ✅ - Comandos de gerenciamento de salas e usuários (criar, listar, entrar, sair, ...).
+
 ✅ - Sistema de usuários (sem autenticação).
+
 🕐 - Criação de diferentes sockets para cada sala existente, descentralizando a recepção das mensagens e comandos.
+
 🕐 - Autenticação de usuários.
+
 🕐 - Log de mensagens, permitindo recuperar um histórico das mensagens enviadas.
+
 🕐 - Criação de salas privadas (protegidas por senha)
+
 🕐 - Cargo administrador, para gerenciamento do sistema no geral (controle de diversas salas)
+
 🕐 - Interface web
