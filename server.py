@@ -3,7 +3,6 @@
 from socket import *
 import os
 from dotenv import load_dotenv
-import sys  # Para encerrar o programa
 import threading
 import signal
 
